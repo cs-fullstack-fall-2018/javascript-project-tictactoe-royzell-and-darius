@@ -1,6 +1,27 @@
+// Setup your Variables
+
+// Handle Restart game button
 
 
-var game = (() => {
+// Grab all the play spaces in the board
+
+
+// Clear all the play spaces in the board
+
+
+// Setup click handlers for each play space on the board
+
+
+// Handle a play space being clicked
+
+
+// Switch player turn
+
+
+// Check for winner or CAT/tie
+
+
+// var game = (() => {
     var gameBoard = createBoard();
     var player = newPlayer();
     var computer = newComputerPlayer();
@@ -8,13 +29,17 @@ var game = (() => {
     var scoreContainer = document.querySelector(".Score");
     var lastPlayer = "";
 
+    //Button reset
+    var resetBtn = document.querySelector("#idStartButton");
+    resetBtn.addEventListener("click", resetBoard);
+
     // "E" represent empty slots in the board
 
     drawGame(gameBoard, player);
 
     //Create the HTML elements to display board and score
     function drawGame(gameBoard, player, winningLines) {
-        for (var i = 0; i < 9; i++) {
+        for (var i = 0; i <  9; i++) {
             const p = document.createElement("p");
 
             p.innerHTML = gameBoard[i];
@@ -39,10 +64,10 @@ var game = (() => {
         //Add score to its container
         const c = document.createElement("p");
         c.classList = "Score";
-        c.innerHTML = `${player.getName()} score: ${player.getScore()} 
-                      ${computer.getName()} score: ${computer.getScore()}`;
+        // c.innerHTML = `${player.getName()} score: ${player.getScore()}
+        //               ${computer.getName()} score: ${computer.getScore()}`;
 
-        scoreContainer.appendChild(node);
+        scoreContainer.appendChild(c);
     }
 
     // Checks if the board contains any winning line
@@ -58,6 +83,8 @@ var game = (() => {
 
         return winner;
     }
+
+    //Havent fully implimented it
 
     function displayWinner() {
         const scoreText = document.querySelector(".Score");
@@ -75,6 +102,7 @@ var game = (() => {
     }
 
 
+    //Having complications
     function checkState(gameBoard) {
         if (lookForWinner(gameBoard)) {
             displayWinner();
@@ -100,6 +128,7 @@ var game = (() => {
         return gameBoard;
     }
 
+    //only works with the button
     function resetBoard() {
         setTimeout(() => {
             var matchResult = document.querySelector(".Score");
@@ -113,7 +142,7 @@ var game = (() => {
             }
         }, 1000)
     }
-
+    // is not really working
     // Player factory
     function newPlayer() {
         const name = prompt("Please, enter your name", "Player");
@@ -130,7 +159,7 @@ var game = (() => {
 
         return {getName, getScore, addPoint, play}
     }
-
+    // Roy did the computer=  but it picks a random spot and places o in it
     // ComputerPLayer factory
     function newComputerPlayer() {
         var name = "Computer";
@@ -140,6 +169,7 @@ var game = (() => {
         var addPoint = () => {
             score += 1
         };
+
         //Computer makes a valid move
         const play = () => {
             var randomNum = Math.floor(Math.random() * 9);
@@ -160,10 +190,8 @@ var game = (() => {
     }
 
 
-})();
 
 
 
 
 
-game();

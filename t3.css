@@ -1,34 +1,4 @@
-/* Use borders to draw a box */
 
-/*table {*/
-    /*margin: auto;*/
-/*}*/
-
-/*td {*/
-    /*width: 100px;*/
-    /*height: 100px;*/
-    /*text-align: center;*/
-    /*font-size: 65px;*/
-/*}*/
-
-/*td:hover {*/
-    /*border: 1px solid grey;*/
-/*}*/
-
-/*.vertical {*/
-    /*border-left: 2px solid black;*/
-    /*border-right: 2px solid black;*/
-/*}*/
-
-/*.horizontal {*/
-    /*border-top: 2px solid black;*/
-    /*border-bottom: 2px solid black;*/
-/*}*/
-
-/*#choice {*/
-
-
-/*}*/
 
 html, body {
     width: 100%;
@@ -56,12 +26,8 @@ html, body {
     color: white;
     text-align: center;
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-}
 
+}
 .Score {
     text-align: center;
     font-weight: bold;
