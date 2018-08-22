@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TTT 3000</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="t3.css"/>
+    </head>
+    <body>
+    <div class="container">
+        <div class="jumbotron">
+        <h1>Tic Tac Toe 3000</h1> <!-- Name it whatever you want -->
+            <button id = "idStartButton" type="button" class = "btn btn-primary btn-lg" name="startButton">Let's Do This!</button>
+        </div>
+        <!-- Use a table to build a tic-tac-toe board -->
+        <table align="center">
+            <tr>
+                <td>X</td>
+                <td class="vertical"></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="horizontal"></td>
+                <td class="vertical horizontal">X</td>
+                <td class="horizontal"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="vertical"></td>
+                <td>X</td>
+            </tr>
+        </table>
+
+        <!-- Include our JavaScript after the table is built -->
+        <script src="t3.js"></script>
+    </body>
+    </div>
+</html>
