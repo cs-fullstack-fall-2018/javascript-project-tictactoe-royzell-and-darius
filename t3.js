@@ -112,6 +112,7 @@ var game = (() => {
         }));
     }
 
+
     function createBoard() {
         var gameBoard = [];
         for (let i = 0; i < 9; i++) {
@@ -122,7 +123,7 @@ var game = (() => {
 
     function resetBoard() {
         setTimeout(() => {
-            var matchResult = document.querySelector(".Result");
+            var matchResult = document.querySelector(".Score");
             matchResult.classList.remove("visible-text");
             lastPlayer = "";
             for (let i = 0; i < 9; i++) {
@@ -153,8 +154,8 @@ var game = (() => {
 
     // ComputerPLayer factory
     function newComputerPlayer() {
-        const name = "Computer";
-        let score = 0;
+        var name = "Computer";
+        var score = 0;
         var getName = () => name;
         var getScore = () => score;
         var addPoint = () => {
@@ -162,8 +163,8 @@ var game = (() => {
         };
         //Computer makes a valid move
         const play = () => {
-            let randomNum = Math.floor(Math.random() * 9);
-            let target = document.getElementById(`element${randomNum}`);
+            var randomNum = Math.floor(Math.random() * 9);
+            var target = document.getElementById(`element${randomNum}`);
 
             while (target.innerHTML != "E") {
                 randomNum = Math.floor(Math.random() * 9);
@@ -178,12 +179,7 @@ var game = (() => {
 
         return {getName, getScore, addPoint, play}
     }
-
-    function getName() {
-
-        var v = prompt("What is your name?");
-        return(v);
-    }
+    
 
 })();
 
