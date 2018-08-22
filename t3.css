@@ -1,26 +1,73 @@
 /* Use borders to draw a box */
 
-table {
-    margin: auto;
+/*table {*/
+    /*margin: auto;*/
+/*}*/
+
+/*td {*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*text-align: center;*/
+    /*font-size: 65px;*/
+/*}*/
+
+/*td:hover {*/
+    /*border: 1px solid grey;*/
+/*}*/
+
+/*.vertical {*/
+    /*border-left: 2px solid black;*/
+    /*border-right: 2px solid black;*/
+/*}*/
+
+/*.horizontal {*/
+    /*border-top: 2px solid black;*/
+    /*border-bottom: 2px solid black;*/
+/*}*/
+
+/*#choice {*/
+
+
+/*}*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
 }
 
-td {
-    width: 100px;
-    height: 100px;
+.Board {
+    display: grid;
+    width: 45%;
+    margin: 70px auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px 10px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: rgb(235,235,235);
+}
+
+.grid-element {
+    margin: 0;
+    background: white;
+    font-size: 10vw;
+    color: white;
     text-align: center;
-    font-size: 65px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
-td:hover {
-    border: 1px solid grey;
+.Score {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-.vertical {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-}
-
-.horizontal {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+.visible-text {
+    color: black;
 }
